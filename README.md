@@ -7,3 +7,7 @@ This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) fo
 ## Versions
 
 * MySQL: `5.7`
+
+## Bug Notice
+
+This will only copy over `mysqldump` as part of the buildpack for now.
