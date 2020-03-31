@@ -2,4 +2,4 @@ sudo: false
 before_install:
   - gem install bundler
 rvm:
-  - '2.3.1'
+  - '2.6.5'
