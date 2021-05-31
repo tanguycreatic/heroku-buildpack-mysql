@@ -4,8 +4,8 @@ module BuildPack
   class Downloader
     MYSQL_BASE_URL = "http://security.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/"
 
-    # example client: "mysql-client-5.7_5.7.22-0ubuntu0.16.04.1_amd64.deb"
-    REGEX = /.*(mysql-client-8\.0_8\.0\.\d\d-0ubuntu0\.20\.\d\d\.\d_amd64.deb).*/
+    # example client: "mysql-client-core-8.0_8.0.22-0ubuntu0.20.04.1_amd64.deb"
+    REGEX = /.*(mysql-client-core-8\.0_8\.0\.\d\d-0ubuntu0\.20\.\d\d\.\d_amd64.deb).*/
 
     class << self
       def download_latest_client_to(path)
