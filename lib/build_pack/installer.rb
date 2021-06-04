@@ -61,7 +61,11 @@ module BuildPack
         # ```
         # binaries = Dir.glob("#{@mysql_binaries}/*")
         # ```
-        mysqldump_binary = Dir.glob("#{@mysql_binaries}/mysql")
+        mysql_binary = Dir.glob("#{@mysql_binaries}/mysql")
+        FileUtils.chmod("u=wrx", mysql_binary)
+        FileUtils.mv(mysql_binary, @bin_path)
+        
+        mysqldump_binary = Dir.glob("#{@mysql_binaries}/mysqldump")
         FileUtils.chmod("u=wrx", mysqldump_binary)
         FileUtils.mv(mysqldump_binary, @bin_path)
       end
