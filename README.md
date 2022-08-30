@@ -1,13 +1,8 @@
 # heroku-buildpack-mysql
 
-[![Build Status](https://secure.travis-ci.org/Shopify/heroku-buildpack-mysql.png)](http://travis-ci.org/Shopify/heroku-buildpack-mysql)
-
-This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) for vendoring the mysql client binaries into your project.
+This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) for vendoring the `mysql` and `mysqldump` binaries from the `mysql-client` deb package. 
 
 ## Versions
 
-* MySQL: `5.7`
+* MySQL: `8.0`
 
-## Bug Notice
-
-This will only copy over `mysqldump` as part of the buildpack for now.

@@ -20,9 +20,9 @@ module BuildPack
       def init_paths(build_dir, cache_dir)
         @bin_path = "#{build_dir}/bin"
         @tmp_path = "#{build_dir}/tmp"
-        @mysql_path = "#{@tmp_path}/mysql"
+        @mysql_path = "#{@tmp_path}/mysql-client-core"
         @mysql_binaries = "#{@mysql_path}/usr/bin"
-        @mysql_pkg = "#{cache_dir}/mysql.deb"
+        @mysql_pkg = "#{cache_dir}/mysql-client-core.deb"
       end
 
       def make_dirs
@@ -61,6 +61,10 @@ module BuildPack
         # ```
         # binaries = Dir.glob("#{@mysql_binaries}/*")
         # ```
+        mysql_binary = Dir.glob("#{@mysql_binaries}/mysql")
+        FileUtils.chmod("u=wrx", mysql_binary)
+        FileUtils.mv(mysql_binary, @bin_path)
+        
         mysqldump_binary = Dir.glob("#{@mysql_binaries}/mysqldump")
         FileUtils.chmod("u=wrx", mysqldump_binary)
         FileUtils.mv(mysqldump_binary, @bin_path)
