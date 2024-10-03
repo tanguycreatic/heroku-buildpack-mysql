@@ -2,7 +2,7 @@ require 'net/http'
 
 module BuildPack
   class Downloader
-    MYSQL_BASE_URL = "http://security.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/"
+    MYSQL_BASE_URL = "http://security.ubuntu.com/ubuntu/pool/main/m/mysql-8.4/"
 
     # example client: "mysql-client-core-8.0_8.0.22-0ubuntu0.20.04.1_amd64.deb"
     REGEX = /.*(mysql-client-core-8\.0_8\.0\.\d\d-0ubuntu0\.20\.\d\d\.\d_amd64.deb).*/
