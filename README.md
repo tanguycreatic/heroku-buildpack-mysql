@@ -4,5 +4,5 @@ This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) fo
 
 ## Versions
 
-* MySQL: `8.4`
+* MySQL: `8.0`
 
